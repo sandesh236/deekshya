@@ -13,7 +13,7 @@ const SEO = {
         description,
         images: [
             {
-                url: 'https:/deekshya.tricodetechnology.com.np/favicon/large-og.jpg',
+                url: 'https:/deekshya.tricodetechnology.com.np/favicon/ms-icon-310x310.png',
                 alt: title,
                 width: 1200,
                 height: 1200,
