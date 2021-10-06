@@ -15,7 +15,7 @@ export default function FeaturesList(){
 
 function FeatureCard({feature}){
     
-    return <div className={`my-12  bg-white rounded-md py-4  px-8 md:shadow-none md:rounded-xl md:space-x-16 flex flex-${ feature.id%2==0?'col':'col-reverse' } items-center  gap-4 shadow-sm mx-auto md:mx-0 md:my-28 md:max-w-none md:px-8   md:flex-row event__card_group `}>
+    return <div className={`my-12  bg-white rounded-md py-4  px-8 md:shadow-none md:rounded-xl md:space-x-16 flex flex-col ${feature.id%2==0?'flex-col':'flex-col-reverse'} items-center  gap-4 shadow-sm mx-auto md:mx-0 md:my-28 md:max-w-none md:px-8   md:flex-row event__card_group `}>
         { feature.id%2==0?<FeatureImage id={feature.id} source={feature.payload.image} alt={feature.alt}/>:""}
         <div className={`  mt-4 space-y-2 `} >
             <img className="w-8 h-8"src={`/images/features/${feature.id%2==0?'triangle-circle.svg':'polygon-circle.svg'}`} />
