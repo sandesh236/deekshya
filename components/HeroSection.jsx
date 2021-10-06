@@ -1,7 +1,7 @@
 import { Link } from "react-scroll"
 export default function HeroSection(){
     return<section className="w-full">
-        <img className=" mx-auto object-cover -z-10 hidden lg:block absolute right-0 left-0  "src="/images/background.svg" />
+        <img className=" mx-auto  -z-10 hidden lg:block absolute right-0 left-0  "src="/images/background.svg" />
         <div className="  relative flex mb-12 md:mb-0 flex-col md:flex-row mt-26 bg-gradient-to-l from-primary to-secondary max-w-6xl px-8 mx-auto w-full lg:from-transparent lg:to-transparent">
             <div className="flex-1 block pt-48  pb-14 xl:pb-24">
             <h1 className="text-white">forget Excel, <br /> manage with Deekshya</h1>

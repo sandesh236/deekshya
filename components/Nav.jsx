@@ -35,7 +35,7 @@ export default function Nav() {
                     <li>
                         <UnstyledLink
                             href='/'
-                            className={`text-primary text-sm font-bold tracking-wide transition font-primary hover:text-spurple-500 md:text-base active:scale-95`  }                     >
+                            className={`text-${logoColor} text-sm font-bold tracking-wide transition font-primary hover:text-gray-200 md:text-base active:scale-95`  }                     >
                             Home
                         </UnstyledLink>
                     </li>
