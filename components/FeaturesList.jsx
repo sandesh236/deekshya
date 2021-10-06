@@ -78,7 +78,7 @@ function FeatureDetailsList ({data}){
 <div className="flex my-1 md:my-4">
          <div className="w-3 mr-4 h-3 col-auto rounded-full bg-primary ring-4 ring-secondary ring-opacity-40 my-2"> </div>
          <div className="col-span-full w-full"> 
-          <p className=" font-semibold text-gray-900 text-lg">{data.title}</p>
+          <p className=" font-semibold text-gray-900 text-md md:text-lg">{data.title}</p>
           <p className='max-w-lg mb-2 md:mb-4 leading-7 text-gray-800'>
                     {data.subtitle}
                 </p>
