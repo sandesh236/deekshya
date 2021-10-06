@@ -24,21 +24,3 @@ const SEO = {
 
 export default SEO;
 
-// EXAMPLES
-{
-    /* 
-    const title = 'Next.js Tailwind Starter';
-    const description = 'your description';
-    const url = 'https://theodorusclarence.com';
-
-    <NextSeo
-    title={title}
-    description={description}
-    canonical={url}
-    openGraph={{
-        url,
-        title,
-        description,
-    }}
-/>;  */
-}

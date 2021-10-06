@@ -10,8 +10,8 @@ export default function HomePage() {
         <>
             <NextSeo />
             <Nav />
-            <main className="max-w-7xl">
-                <section className='relative '>
+            <main className="">
+                <section className='bg-background relative '>
                    <HeroSection />
                 </section>
                 <section className='bg-background'>
