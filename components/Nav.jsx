@@ -27,7 +27,8 @@ export default function Nav() {
         <nav className={`fixed top-0 z-50 w-full bg-${backgroundColor}`}>
             <div className='flex items-center justify-between h-16 py-2 text-black layout'>
                 <UnstyledLink href='/'>
-                    <figure className='w-28 md:w-40'>
+                    <figure className='w-28 flex items-center md:w-40'>
+                        <img className="w-6 h-6 md:w-8 md:h-8 mr-3" src="/favicon/ms-icon-150x150.png" />
                        <h3 className={`text-${logoColor}`}>Deekshya <hr className={`w-12 h-1 rounded-full bg-${logoColor}`}/></h3>
                     </figure>
                 </UnstyledLink>
