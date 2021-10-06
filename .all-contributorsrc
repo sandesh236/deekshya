@@ -1,0 +1,70 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "theodorusclarence",
+      "name": "Theodorus Clarence",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55318172?v=4",
+      "profile": "https://theodorusclarence.com",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "reyhannaufal",
+      "name": "Reyhan Naufal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59334824?v=4",
+      "profile": "http://reyhannaufal.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ishaqadhel",
+      "name": "ishaqadhel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49280352?v=4",
+      "profile": "https://ishaqadhel.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "arkanaulia",
+      "name": "arkanaulia",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32859227?v=4",
+      "profile": "https://github.com/arkanaulia",
+      "contributions": [
+        "design"
+      ]
+    },
+    {
+      "login": "jeffrenstanadi",
+      "name": "jeffrenstanadi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81693794?v=4",
+      "profile": "https://github.com/jeffrenstanadi",
+      "contributions": [
+        "design"
+      ]
+    },
+    {
+      "login": "anugraharief",
+      "name": "Anugrah Arief",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85831900?v=4",
+      "profile": "https://github.com/anugraharief",
+      "contributions": [
+        "design"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "sxceosleague",
+  "projectOwner": "theodorusclarence",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
