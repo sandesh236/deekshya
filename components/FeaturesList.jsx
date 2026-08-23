@@ -97,14 +97,12 @@ function FeatureRow({ feature, index }) {
             <div style={{
                 order: isEven ? 2 : 1,
                 display: 'flex', justifyContent: 'center', alignItems: 'center',
-                padding: '2rem',
-                background: 'var(--gray-subtle)',
-                border: '1px solid var(--gray-line)',
+                padding: '1rem',
             }}>
                 <img
                     src={feature.payload.image}
                     alt={feature.title}
-                    style={{ maxWidth: '100%', maxHeight: '280px', objectFit: 'contain' }}
+                    style={{ maxWidth: '100%', maxHeight: '300px', objectFit: 'contain' }}
                 />
             </div>
 
