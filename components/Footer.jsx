@@ -22,7 +22,7 @@ export default function Footer() {
                     {/* Brand */}
                     <div style={{ gridColumn: 'span 1' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.25rem' }}>
-                            <img src="/images/logo/nav-logo.png" alt="Deekshya" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
+                            <img src="/favicon/ms-icon-150x150.png" alt="Deekshya" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
                             <div style={{ lineHeight: 1 }}>
                                 <div style={{
                                     fontFamily: "'Fraunces', Georgia, serif",

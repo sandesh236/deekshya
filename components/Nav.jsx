@@ -31,7 +31,7 @@ export default function Nav() {
                     <UnstyledLink href="/">
                         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                             <img
-                                src="/images/logo/nav-logo.png"
+                                src="/favicon/ms-icon-150x150.png"
                                 alt="Deekshya"
                                 style={{ width: '32px', height: '32px', objectFit: 'contain' }}
                             />
