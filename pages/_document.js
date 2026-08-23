@@ -17,122 +17,26 @@ class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap"
                         rel="stylesheet"
                     />
-                    {/* Favicons */}
-                    <link rel='apple-touch-icon' sizes='57x57'   href='/favicon/apple-icon-57x57.png' />
-                    <link rel='apple-touch-icon' sizes='60x60'   href='/favicon/apple-icon-60x60.png' />
-                    <link rel='apple-touch-icon' sizes='72x72'   href='/favicon/apple-icon-72x72.png' />
-                    <link rel='apple-touch-icon' sizes='76x76'   href='/favicon/apple-icon-76x76.png' />
-                    <link rel='apple-touch-icon' sizes='114x114' href='/favicon/apple-icon-114x114.png' />
-                    <link rel='apple-touch-icon' sizes='120x120' href='/favicon/apple-icon-120x120.png' />
-                    <link rel='apple-touch-icon' sizes='144x144' href='/favicon/apple-icon-144x144.png' />
-                    <link rel='apple-touch-icon' sizes='152x152' href='/favicon/apple-icon-152x152.png' />
-                    <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-icon-180x180.png' />
-                    <link rel='icon' type='image/png' sizes='192x192' href='/favicon/android-icon-192x192.png' />
-                    <link rel='icon' type='image/png' sizes='32x32'   href='/favicon/favicon-32x32.png' />
-                    <link rel='icon' type='image/png' sizes='96x96'   href='/favicon/favicon-96x96.png' />
-                    <link rel='icon' type='image/png' sizes='16x16'   href='/favicon/favicon-16x16.png' />
-                    <link rel='manifest' href='/favicon/manifest.json' />
-                    <meta name='msapplication-TileColor' content='#014C8F' />
-                    <meta name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png' />
-                    <meta name='theme-color' content='#FAF9F7' />
-                    <meta name='color-scheme' content='light' />
-                    <link rel='icon' href='/favicon/favicon.ico' type='image/x-icon' />
+                    <link rel="apple-touch-icon" sizes="57x57"   href="/favicon/apple-icon-57x57.png" />
+                    <link rel="apple-touch-icon" sizes="60x60"   href="/favicon/apple-icon-60x60.png" />
+                    <link rel="apple-touch-icon" sizes="72x72"   href="/favicon/apple-icon-72x72.png" />
+                    <link rel="apple-touch-icon" sizes="76x76"   href="/favicon/apple-icon-76x76.png" />
+                    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png" />
+                    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png" />
+                    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png" />
+                    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png" />
+                    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png" />
+                    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png" />
+                    <link rel="icon" type="image/png" sizes="32x32"   href="/favicon/favicon-32x32.png" />
+                    <link rel="icon" type="image/png" sizes="96x96"   href="/favicon/favicon-96x96.png" />
+                    <link rel="icon" type="image/png" sizes="16x16"   href="/favicon/favicon-16x16.png" />
+                    <link rel="manifest" href="/favicon/manifest.json" />
+                    <meta name="msapplication-TileColor" content="#014C8F" />
+                    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
+                    <meta name="theme-color" content="#FAF9F7" />
+                    <meta name="color-scheme" content="light" />
+                    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
                 </Head>
-                <body>
-                    <Main />
-                    <NextScript />
-                </body>
-            </Html>
-        );
-    }
-}
-
-export default MyDocument;
-
-                <Head>
-                    <link
-                        rel='apple-touch-icon'
-                        sizes='57x57'
-                        href='/favicon/apple-icon-57x57.png'
-                    />
-                    <link
-                        rel='apple-touch-icon'
-                        sizes='60x60'
-                        href='/favicon/apple-icon-60x60.png'
-                    />
-                    <link
-                        rel='apple-touch-icon'
-                        sizes='72x72'
-                        href='/favicon/apple-icon-72x72.png'
-                    />
-                    <link
-                        rel='apple-touch-icon'
-                        sizes='76x76'
-                        href='/favicon/apple-icon-76x76.png'
-                    />
-                    <link
-                        rel='apple-touch-icon'
-                        sizes='114x114'
-                        href='/favicon/apple-icon-114x114.png'
-                    />
-                    <link
-                        rel='apple-touch-icon'
-                        sizes='120x120'
-                        href='/favicon/apple-icon-120x120.png'
-                    />
-                    <link
-                        rel='apple-touch-icon'
-                        sizes='144x144'
-                        href='/favicon/apple-icon-144x144.png'
-                    />
-                    <link
-                        rel='apple-touch-icon'
-                        sizes='152x152'
-                        href='/favicon/apple-icon-152x152.png'
-                    />
-                    <link
-                        rel='apple-touch-icon'
-                        sizes='180x180'
-                        href='/favicon/apple-icon-180x180.png'
-                    />
-                    <link
-                        rel='icon'
-                        type='image/png'
-                        sizes='192x192'
-                        href='/favicon/android-icon-192x192.png'
-                    />
-                    <link
-                        rel='icon'
-                        type='image/png'
-                        sizes='32x32'
-                        href='/favicon/favicon-32x32.png'
-                    />
-                    <link
-                        rel='icon'
-                        type='image/png'
-                        sizes='96x96'
-                        href='/favicon/favicon-96x96.png'
-                    />
-                    <link
-                        rel='icon'
-                        type='image/png'
-                        sizes='16x16'
-                        href='/favicon/favicon-16x16.png'
-                    />
-                    <link rel='manifest' href='/favicon/manifest.json' />
-                    <meta name='msapplication-TileColor' content='#ffffff' />
-                    <meta
-                        name='msapplication-TileImage'
-                        content='/favicon/ms-icon-144x144.png'
-                    />
-                    <meta name='theme-color' content='#ffffff' />
-                    <link
-                        rel='icon'
-                        href='/favicon/favicon.ico'
-                        type='image/x-icon'
-                    ></link>
-
-                  </Head>
                 <body>
                     <Main />
                     <NextScript />
