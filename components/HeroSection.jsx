@@ -39,7 +39,7 @@ export default function HeroSection() {
                     School MIS · Built by TriCode Technology · Kathmandu, Nepal
                 </div>
 
-                {/* Main headline — the whole message in one breath */}
+                {/* Headline */}
                 <h1 style={{
                     fontFamily: "'Fraunces', Georgia, serif",
                     fontWeight: 600,
@@ -50,14 +50,13 @@ export default function HeroSection() {
                     marginBottom: '2rem',
                     maxWidth: '16ch',
                 }}>
-                    Your school.<br />
-                    Not your<br />
+                    Forget Excel.<br />
                     <span style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.45)' }}>
-                        spreadsheet.
+                        Run your school<br />on Deekshya.
                     </span>
                 </h1>
 
-                {/* Sub — one clean sentence */}
+                {/* Sub */}
                 <p style={{
                     fontFamily: "'Space Grotesk', sans-serif",
                     fontSize: '1.125rem', lineHeight: 1.75,
@@ -65,9 +64,8 @@ export default function HeroSection() {
                     maxWidth: '36rem',
                     marginBottom: '3rem',
                 }}>
-                    Student records, HR, payroll, library, accounting, and
-                    notifications — automated, cloud-based, and built to
-                    replace every spreadsheet your school runs on.
+                    Records, payroll, library, and accounts — one connected system,
+                    built to replace every spreadsheet your school runs on.
                 </p>
 
                 {/* CTAs */}
@@ -119,9 +117,9 @@ export default function HeroSection() {
                         borderRight: '1px solid rgba(255,255,255,0.08)',
                     }}>
                         {[
-                            { value: '6+',   label: 'Modules',      sub: 'Fully integrated' },
-                            { value: '100%', label: 'Cloud-based',  sub: 'Access anywhere' },
-                            { value: '24/7', label: 'Data access',  sub: 'Real-time sync' },
+                            { value: '6+',   label: 'Connected modules' },
+                            { value: '100%', label: 'Cloud-based' },
+                            { value: '24/7', label: 'Access from anywhere' },
                         ].map(s => (
                             <div key={s.label} style={{
                                 padding: '1.5rem 1.75rem',

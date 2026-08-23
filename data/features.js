@@ -1,111 +1,92 @@
-export const featuresData=[
+export const featuresData = [
     {
-        id:0,
-        title:"Excel is too hard to maintain",
-        payload:{
-             data:[{
-                title:"It takes a lot of time and money.",
-                subtitle:"Does is take a long time to execute and need more resources to manage & maintain?"
-            },
-            {
-                title:"I get frequent errors.",
-                subtitle:"Do you get confuse creating excel rules and formulas and to enter?  "
-
-            },
-            ],
-            image:"/images/features/excel.svg",
-           
-        }
-
-        
-        },
-    {
-        id:1,
-        title:'Manage it automatically now.',
-        payload:{
-             data:[{
-                title:"Automated report",
-                subtitle:"Generate automated report, salary, slip, deposite slip within a few click"
-            },
-            {
-                title:"Manage HR",
-                subtitle:"Provides space for resource management automatically with full details"
-
-            },
-            {
-                title:"Manage library books and keep track",
-                subtitle:"Easily track and manage library's books and study materials"
-            }],
-            image:"/images/features/automatic.svg",
-           
-        }
-
-        
-        },
-        {
-            id:2,
-            title:"Student, teacher & parents",
-            payload:{
-                data:[
-                    {title:"keep track of student progress and visualize the report"},
-                    {title:"Publish result and store resutls for future use"},{title:"Maintainable progress report"},
-                    {title:"Visualize student's yearly and monthly progress"}
-                
-            ],
-            image:"/images/features/report.svg"
-            }
-        },
-
-
-        {
-            id:3,
-            title:'Your data is secure at cloud',
-            payload:{
-                 data:[{
-                    title:"No use of physical storage",
-                    subtitle:"All your data are securely stored in cloud"
+        id: 0,
+        title: "Excel is where school data goes to get lost",
+        payload: {
+            data: [
+                {
+                    title: "It costs more than it saves.",
+                    subtitle: "Every new formula, every broken sheet, every re-entered record eats staff time you don't have."
                 },
                 {
-                    title:"No more data loss",
-                    subtitle:"No matter what happens to your computer or hardisk, you will still have a safe and secure copy of your data."
-    
-                }],
-                image:"images/features/cloud.svg"
-            }
-    
-            
-            },
-
-            {
-                id:4,
-                title:"Get instant notifications.",
-                payload:{
-                    data:[
-                        {title:"Get instant update of your shool activity"},
-                        {title:"Track through email and application notification"},
-                        {title:"Get notification in real time"},
-                       
-                    
-                ],
-                image:"images/features/notifications.svg"
-                }
-            },
-            {
-                id:5,
-                title:"Accounting and creability",
-                payload:{
-                    data:[
-                        {title:"Easily manage accouts session using automated tools"},
-                        {title:"Visualize and generate yearly icome/expenditure within a few click"},
-                        {title:"No need of different formulae, calculations and logic behind the functionality"},
-                        {title:"keep track of all bill amount and due amount, generate and visualized report"}
-                       
-                    
-                ],
-                image:"images/features/accounting.svg"
-                }
-            },
-    
-
+                    title: "Errors compound.",
+                    subtitle: "One wrong cell in September becomes a wrong report card in March."
+                },
+            ],
+            image: "/images/features/excel.svg",
+        }
+    },
+    {
+        id: 1,
+        title: "Let the system do the admin work",
+        payload: {
+            data: [
+                {
+                    title: "Reports, generated, not assembled.",
+                    subtitle: "Salary slips, deposit slips, and progress reports in a few clicks — not a few hours."
+                },
+                {
+                    title: "HR that manages itself.",
+                    subtitle: "Staff records, attendance, and resources tracked automatically, in one place."
+                },
+                {
+                    title: "A library that knows what it owns.",
+                    subtitle: "Track every book, every loan, without a logbook."
+                },
+            ],
+            image: "/images/features/automatic.svg",
+        }
+    },
+    {
+        id: 2,
+        title: "Built for students, teachers, and parents",
+        payload: {
+            data: [
+                { title: "Progress, visualized.", subtitle: "See a student's trajectory across the year, not just a single test score." },
+                { title: "Results that don't disappear.", subtitle: "Publish and store results permanently, ready to reference anytime." },
+                { title: "One report, every stakeholder.", subtitle: "Teachers, parents, and admins looking at the same accurate picture." },
+            ],
+            image: "/images/features/report.svg"
+        }
+    },
+    {
+        id: 3,
+        title: "Your data is safer in the cloud than in the office",
+        payload: {
+            data: [
+                {
+                    title: "No hard drive to lose.",
+                    subtitle: "No physical storage, no single point of failure."
+                },
+                {
+                    title: "Nothing to back up manually.",
+                    subtitle: "If a computer dies, your records don't die with it."
+                },
+            ],
+            image: "/images/features/cloud.svg"
+        }
+    },
+    {
+        id: 4,
+        title: "Know what's happening, in real time",
+        payload: {
+            data: [
+                { title: "Instant updates on school activity.", subtitle: "No waiting for the weekly summary email." },
+                { title: "Email and in-app alerts.", subtitle: "Reach the right person the moment something needs attention." },
+            ],
+            image: "/images/features/notifications.svg"
+        }
+    },
+    {
+        id: 5,
+        title: "Accounting without the spreadsheet gymnastics",
+        payload: {
+            data: [
+                { title: "Automated books.", subtitle: "Manage accounts without hand-built formulas or manual reconciliation." },
+                { title: "Income and expenditure, visualized.", subtitle: "Generate a full-year financial picture in a few clicks." },
+                { title: "Never lose track of a due amount.", subtitle: "Every bill, every payment, tracked and reportable." },
+            ],
+            image: "/images/features/accounting.svg"
+        }
+    },
 ]
-

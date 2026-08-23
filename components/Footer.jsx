@@ -42,7 +42,9 @@ export default function Footer() {
                             </div>
                         </div>
                         <p style={{ fontSize: '0.875rem', color: 'var(--ink-3)', lineHeight: 1.6, marginBottom: '0.75rem' }}>
-                            School information management and automation software.
+                            The all-in-one system schools in Nepal use to replace
+                            spreadsheets: student records, HR, payroll, library,
+                            and accounting, all connected.
                         </p>
                         <p style={{ fontSize: '0.875rem', color: 'var(--ink-3)', lineHeight: 1.6 }}>
                             Built by{' '}
@@ -131,16 +133,16 @@ export default function Footer() {
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '0.75rem' }}>
                     <span style={{
                         fontFamily: "'JetBrains Mono', monospace",
-                        fontSize: '0.6875rem', letterSpacing: '0.1em',
+                        fontSize: '0.6875rem', letterSpacing: '0.08em',
                         textTransform: 'uppercase', color: 'var(--ink-4)',
                     }}>
-                        © {year} TriCode Technology. All rights reserved.
+                        © {year} TriCode Technology Pvt. Ltd. All rights reserved. Deekshya is built and supported in Kathmandu, Nepal.
                     </span>
                     <span style={{
                         fontFamily: "'Fraunces', Georgia, serif",
                         fontSize: '0.875rem', fontStyle: 'italic', color: 'var(--ink-4)',
                     }}>
-                        Built with precision. Made for schools.
+                        Fewer spreadsheets. Fewer errors. More time to teach.
                     </span>
                 </div>
 

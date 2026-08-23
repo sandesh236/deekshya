@@ -26,13 +26,14 @@ export default function Consultation() {
                     <div className="overline" style={{ marginBottom: '1.25rem' }}>Get in touch</div>
 
                     <h2 style={{ marginBottom: '1.5rem' }}>
-                        See Deekshya in action.<br />
-                        <span style={{ color: 'var(--blue)', fontStyle: 'italic' }}>We'll show you everything.</span>
+                        See Deekshya running<br />
+                        <span style={{ color: 'var(--blue)', fontStyle: 'italic' }}>your school's actual data.</span>
                     </h2>
 
                     <p style={{ fontSize: '1.0625rem', color: 'var(--ink-2)', marginBottom: '2.5rem', lineHeight: 1.75 }}>
-                        Leave your email and we'll reach out within 24 hours to schedule
-                        a free walkthrough tailored to your school's needs.
+                        Leave your email and we'll walk you through it — no sales
+                        pitch, just the product, tailored to how your school
+                        actually works.
                     </p>
 
                     {sent ? (
@@ -85,7 +86,7 @@ export default function Consultation() {
                                         className="btn-primary"
                                         style={{ padding: '0.875rem 1.75rem' }}
                                     >
-                                        Request demo →
+                                        Request a demo →
                                     </button>
                                 </div>
 
@@ -95,7 +96,7 @@ export default function Consultation() {
                                     textTransform: 'uppercase', color: 'var(--ink-4)',
                                     marginTop: '0.75rem',
                                 }}>
-                                    No spam. No sales pitch. Just a walkthrough.
+                                    No spam. No sales call. Just a 20-minute walkthrough.
                                 </p>
                             </div>
                         </form>

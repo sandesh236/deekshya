@@ -14,9 +14,8 @@ export default function FeaturesList() {
                             <span style={{ color: 'var(--blue)', fontStyle: 'italic' }}>One system.</span>
                         </h2>
                         <p style={{ maxWidth: '28rem', margin: 0, fontSize: '1rem', color: 'var(--ink-2)', lineHeight: 1.75 }}>
-                            Each module works independently or together.
-                            Student records talk to HR. HR talks to payroll.
-                            Everything connected by default.
+                            Each module works on its own or together — student records
+                            feed HR, HR feeds payroll, everything stays in sync automatically.
                         </p>
                     </div>
                 </div>
