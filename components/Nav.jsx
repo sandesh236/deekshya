@@ -1,60 +1,94 @@
-
+import { useEffect, useState } from 'react';
 import UnstyledLink from './UnstyledLink';
-import { useEffect,useState } from 'react';
-import { Link } from 'react-scroll';
+
 export default function Nav() {
-
-
-
-    const [backgroundColor,setBackgroundColor]= useState("transparent");
-    const [logoColor,SetLogoColor]=useState("white")
+    const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
-        
-            document.addEventListener("scroll", () => {
-              const bgcolor = window.scrollY < 100 ? "transparent" : "white";
-                const logocolor=window.scrollY<100?"white":"primary";
-              setBackgroundColor(bgcolor)
-              SetLogoColor(logocolor);
-            });
-          
-    
-    });
-
-
+        const fn = () => setScrolled(window.scrollY > 24);
+        window.addEventListener('scroll', fn, { passive: true });
+        return () => window.removeEventListener('scroll', fn);
+    }, []);
 
     return (
-        <nav className={`fixed top-0 z-50 w-full bg-${backgroundColor}`}>
-            <div className='flex items-center justify-between h-16 py-2 text-black layout'>
-                <UnstyledLink href='/'>
-                    <figure className='w-28 flex items-center md:w-40'>
-                        <img className="w-6 h-6 md:w-8 md:h-8 mr-3" src="/favicon/ms-icon-150x150.png" />
-                       <h3 className={`text-${logoColor}`}>Deekshya <hr className={`w-12 h-1 rounded-full bg-${logoColor}`}/></h3>
-                    </figure>
-                </UnstyledLink>
-                <ul className='flex items-center justify-between space-x-4 md:space-x-8'>
-                    <li>
+        <nav
+            style={{
+                position: 'fixed',
+                top: 0,
+                width: '100%',
+                zIndex: 50,
+                transition: 'background 0.3s, border-color 0.3s',
+                background: scrolled ? 'rgba(250,249,247,0.94)' : 'transparent',
+                backdropFilter: scrolled ? 'blur(14px)' : 'none',
+                WebkitBackdropFilter: scrolled ? 'blur(14px)' : 'none',
+                borderBottom: scrolled ? '1px solid var(--gray-line)' : '1px solid transparent',
+            }}
+        >
+            <div className="layout">
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '64px' }}>
+
+                    {/* Logo + wordmark */}
+                    <UnstyledLink href="/">
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                            <img
+                                src="/images/logo/nav-logo.png"
+                                alt="Deekshya"
+                                style={{ width: '32px', height: '32px', objectFit: 'contain' }}
+                            />
+                            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
+                                <span style={{
+                                    fontFamily: "'Fraunces', Georgia, serif",
+                                    fontWeight: 600,
+                                    fontSize: '1.0625rem',
+                                    letterSpacing: '-0.03em',
+                                    color: scrolled ? 'var(--ink)' : '#ffffff',
+                                    lineHeight: 1,
+                                    transition: 'color 0.3s',
+                                }}>
+                                    Deekshya
+                                </span>
+                                <span style={{
+                                    fontFamily: "'JetBrains Mono', monospace",
+                                    fontSize: '0.5625rem',
+                                    letterSpacing: '0.16em',
+                                    textTransform: 'uppercase',
+                                    color: scrolled ? 'var(--ink-3)' : 'rgba(255,255,255,0.6)',
+                                    lineHeight: 1,
+                                    marginTop: '3px',
+                                    transition: 'color 0.3s',
+                                }}>
+                                    School MIS
+                                </span>
+                            </div>
+                        </div>
+                    </UnstyledLink>
+
+                    {/* Nav links */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
                         <UnstyledLink
-                            href='/'
-                            className={`text-${logoColor} text-sm font-bold tracking-wide transition font-primary hover:text-gray-200 md:text-base active:scale-95`  }                     >
-                            Home
-                        </UnstyledLink>
-                    </li>
-                    <li>
-                        <UnstyledLink
-                            className='inline-flex items-center justify-center px-6 py-2 text-sm font-bold tracking-wide text-white transition rounded-lg font-primary md:text-base bg-gradient-to-r from-spurple-500 to-spurple-600 hover:to-spurple-500 focus:outline-none'
-                            href='https://tricodetechnology.com.np/'
+                            href="https://tricodetechnology.com.np"
+                            style={{
+                                fontFamily: "'Space Grotesk', sans-serif",
+                                fontSize: '0.875rem',
+                                fontWeight: 500,
+                                color: scrolled ? 'var(--ink-2)' : 'rgba(255,255,255,0.75)',
+                                textDecoration: 'none',
+                                transition: 'color 0.2s',
+                            }}
                         >
-                            <Link to="footer" active="true"  spy={true} smooth={true}>Contact us</Link>
+                            By TriCode ↗
                         </UnstyledLink>
-                    </li>
-                </ul>
+                        <a
+                            href="#contact"
+                            className="btn-primary"
+                            style={{ padding: '0.625rem 1.25rem', fontSize: '0.8125rem' }}
+                        >
+                            Get a demo
+                        </a>
+                    </div>
+
+                </div>
             </div>
-            <style jsx>{`
-                nav {
-                    box-shadow: 0px 4px 16px rgba(127, 47, 243, 0.15);
-                }
-            `}</style>
         </nav>
     );
 }

@@ -1,28 +1,108 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
+export default function Consultation() {
+    const [email, setEmail] = useState('');
+    const [sent, setSent] = useState(false);
 
-export default function Consultation(){
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!email) return;
+        // TODO: wire to backend
+        setSent(true);
+    };
 
-    const [email,setEmail]=useState("")
-    const handleSubmit=(event)=>{
-     event.preventDefault();
-     console.log(email)
-    }
     return (
+        <section
+            id="contact"
+            style={{
+                background: 'var(--gray-subtle)',
+                borderTop: '1px solid var(--gray-line)',
+                borderBottom: '1px solid var(--gray-line)',
+            }}
+        >
+            <div className="layout section-pad">
+                <div style={{ maxWidth: '38rem' }}>
 
-        <section id="consultation">
-        <div className='rounded-3xl bg-gray-100'>
-            <div
-                className='py-12 drop-shadow-lg rounded-xl '
-            >
-                <h3 className='block  w-max mx-auto text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary'>lets get in touch</h3>
-                
-                <form className=" flex flex-col sm:flex-row overflow-hidden  mx-8 sm:w-max mt-8 sm:mx-auto border-2 md:overflow-hidden border-primary rounded-md ">
-                    <input className="border-0 w-auto flex-initial rounded-l-md" type="email" name="email"  vlaue={email} onChange={(event)=>setEmail(event.target.value)} placeholder="enter your email..."/>
-                    <button className=" block  py-2 sm:px-3 md:py-0  text-center text-white bg-primary hover:bg-gradient-to-r from-primary to-secondary active:from-secondary active:to-primary active:scale-70 " type="submit" onClick={handleSubmit}>Submit</button>
-                </form>
-            </div> 
-        </div>
+                    <div className="overline" style={{ marginBottom: '1.25rem' }}>Get in touch</div>
+
+                    <h2 style={{ marginBottom: '1.5rem' }}>
+                        See Deekshya in action.<br />
+                        <span style={{ color: 'var(--blue)', fontStyle: 'italic' }}>We'll show you everything.</span>
+                    </h2>
+
+                    <p style={{ fontSize: '1.0625rem', color: 'var(--ink-2)', marginBottom: '2.5rem', lineHeight: 1.75 }}>
+                        Leave your email and we'll reach out within 24 hours to schedule
+                        a free walkthrough tailored to your school's needs.
+                    </p>
+
+                    {sent ? (
+                        <div style={{
+                            padding: '1.25rem 1.75rem',
+                            border: '1px solid var(--blue-border)',
+                            background: 'var(--blue-soft)',
+                        }}>
+                            <p style={{ color: 'var(--blue)', fontWeight: 600, margin: 0 }}>
+                                ✓ Got it — we'll be in touch within 24 hours.
+                            </p>
+                        </div>
+                    ) : (
+                        <form onSubmit={handleSubmit}>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+                                {/* Label */}
+                                <label style={{
+                                    fontFamily: "'JetBrains Mono', monospace",
+                                    fontSize: '0.6875rem', letterSpacing: '0.1em',
+                                    textTransform: 'uppercase', color: 'var(--ink-3)',
+                                    marginBottom: '0.5rem',
+                                }}>
+                                    Your email address
+                                </label>
+
+                                {/* Input row */}
+                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0' }}>
+                                    <input
+                                        type="email"
+                                        required
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        placeholder="principal@school.edu.np"
+                                        style={{
+                                            flex: 1, minWidth: '200px',
+                                            padding: '0.875rem 1rem',
+                                            border: '1.5px solid var(--gray-line)',
+                                            borderRight: 'none',
+                                            background: 'var(--white)',
+                                            fontFamily: "'Space Grotesk', sans-serif",
+                                            fontSize: '0.9375rem',
+                                            color: 'var(--ink)',
+                                            outline: 'none',
+                                        }}
+                                        onFocus={e => e.target.style.borderColor = 'var(--blue)'}
+                                        onBlur={e => e.target.style.borderColor = 'var(--gray-line)'}
+                                    />
+                                    <button
+                                        type="submit"
+                                        className="btn-primary"
+                                        style={{ padding: '0.875rem 1.75rem' }}
+                                    >
+                                        Request demo →
+                                    </button>
+                                </div>
+
+                                <p style={{
+                                    fontFamily: "'JetBrains Mono', monospace",
+                                    fontSize: '0.625rem', letterSpacing: '0.1em',
+                                    textTransform: 'uppercase', color: 'var(--ink-4)',
+                                    marginTop: '0.75rem',
+                                }}>
+                                    No spam. No sales pitch. Just a walkthrough.
+                                </p>
+                            </div>
+                        </form>
+                    )}
+
+                </div>
+            </div>
         </section>
-    )
+    );
 }

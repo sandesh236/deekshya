@@ -1,51 +1,47 @@
 module.exports = {
-    mode: 'jit',
-    purge: [
-        './pages/**/*.{js,jsx,ts,tsx}',
-        './components/**/*.{js,jsx,ts,tsx}',
-    ],
-    darkMode: false, // or 'media' or 'class'
-    theme: {
-        extend: {
-            fontFamily: {
-                primary: ['Barlow', 'sans-serif'],
-                body: ['Poppins', 'sans-serif'],
-            },
-            colors: {
-                primary:'#014C8F',
-                secondary:'#E15FF3',
-                background:'#FCFCFC',
-                sgreen: { 400: '#3fcb9a', 500: '#85F0B1', 600: '#3FCBED' },
-                // Gradient from 500 to 600
-                spurple: {
-                    400: '#7a3cf9',
-                    500: '#9A18F9',
-                    600: '#4F56E9',
-                    800: '#2a0b46',
-                },
-                sorange: {
-                    400: '#FCC86C',
-                    500: '#ffca6c',
-                    600: '#FDB26E',
-                    700: '#FDA750',
-                },
-                sred: { 500: '#f44e61', 600: '#FA8A97', 700: '#EA4C6D' },
-                sblue: { 400: '#51FEE9', 500: '#6CCAFF' },
-                beige: '#FCF5EE',
-                watusi: '#FEE2D2',
-                geraldine: '#FF7B8A',
-                goldentainoi: '#FFC867',
-                tundora: '#4D4D4D',
-            },
-            spacing: {
-                120: '30rem',
-            },
-        },
+  mode: 'jit',
+  content: [
+    './pages/**/*.{js,jsx,ts,tsx}',
+    './components/**/*.{js,jsx,ts,tsx}',
+  ],
+  darkMode: false,
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['Fraunces', 'Georgia', 'serif'],
+        sans:    ['Space Grotesk', 'system-ui', 'sans-serif'],
+        mono:    ['JetBrains Mono', 'monospace'],
+        // legacy aliases
+        primary: ['Fraunces', 'Georgia', 'serif'],
+        body:    ['Space Grotesk', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        // Deekshya brand — deep blue accent
+        blue:    '#014C8F',
+        'blue-hover': '#013970',
+        'blue-soft':  'rgba(1, 76, 143, 0.08)',
+        'blue-border':'rgba(1, 76, 143, 0.18)',
+
+        // Surfaces
+        cream:   '#FAF9F7',
+        'gray-subtle': '#F4F3F0',
+        'gray-line':   '#E8E5E0',
+
+        // Text
+        ink:     '#0E0E0E',
+        'ink-2': '#3A3A3A',
+        'ink-3': '#787878',
+        'ink-4': '#B0ADA8',
+
+        // Legacy (keep for any untouched classes)
+        primary:    '#014C8F',
+        secondary:  '#014C8F',
+        background: '#FAF9F7',
+      },
+      spacing: {
+        120: '30rem',
+      },
     },
-    variants: {
-        extend: {
-            translate: ['group-hover'],
-        },
-    },
-    plugins: [require('@tailwindcss/forms')],
-};
+  },
+  plugins: [require('@tailwindcss/forms')],
+}

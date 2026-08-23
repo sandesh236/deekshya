@@ -1,90 +1,113 @@
-import { featuresData } from "@/data/features";
+import { featuresData } from '@/data/features';
 
-
-export default function FeaturesList(){
- 
- return <>
- <h2 className='block  text-3xl w-max mx-auto text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary'>Do you still manage by hand <br/><span className=" flex justify-center mt-2"> and Excel?</span></h2>
- <div>
-     {featuresData.map((feature)=>(<FeatureCard key={feature.id} feature={feature} />))}
- </div>
- </>   
-}
-
-
-
-function FeatureCard({feature}){
-    
-    return <div className={`my-12  bg-white rounded-md py-4  px-8 md:shadow-none md:rounded-xl md:space-x-16 flex flex-col ${feature.id%2==0?'flex-col':'flex-col-reverse'} items-center  gap-4 shadow-sm mx-auto md:mx-0 md:my-28 md:max-w-none md:px-8   md:flex-row event__card_group `}>
-        { feature.id%2==0?<FeatureImage id={feature.id} source={feature.payload.image} alt={feature.alt}/>:""}
-        <div className={`  mt-4 space-y-2 `} >
-            <img className="w-8 h-8"src={`/images/features/${feature.id%2==0?'triangle-circle.svg':'polygon-circle.svg'}`} />
-            <h3 className="pt-3">{feature.title}</h3>
-            <ul className="pt-2">
-            
-            {
-                feature.payload.data.map((data=>(<FeatureDetailsList key={data.title} data={data}/>)))
-            }
-            </ul>
- 
-            
-
-        </div>
-        { feature.id%2!=0?<FeatureImage id={feature.id} source={feature.payload.image} />:""}
-    </div>
-}
-
-
-
-function FeatureImage({ source,id,alt }) {
+export default function FeaturesList() {
     return (
-        <div
-            className={`mt-6 mr-6 w-80 md:pr-8 md:w-72 xl:w-120 lg:w-96 bg-gradient-to-r ${id%2==0?'col-start-2':'col-start-1'} rounded-2xl`}>
-            <figure className='overflow-hidden   w-80 md:w-72 lg:w-96 xl:w-120 rounded-2xl'>
-                <img
-                    className="object-cover"
-                    src={source}
-                    alt={alt}
-                    width={493}
-                    height={280}
-                  
-                />
-            </figure>
-            <style jsx>{`
-                @media (min-width: 320px) and (max-width: 370px) {
-                    div,
-                    figure {
-                        width: 16rem;
-                    }
-                }
+        <section id="features" style={{ background: 'var(--cream)', borderTop: '1px solid var(--gray-line)' }}>
+            <div className="layout section-pad">
 
-                @media (min-width: 370px) and (max-width: 400px) {
-                    div,
-                    figure {
-                        width: 18.5rem;
-                    }
-                }
-            `}</style>
-        </div>
+                {/* Header */}
+                <div style={{ marginBottom: '5rem' }}>
+                    <div className="overline" style={{ marginBottom: '1.25rem' }}>What Deekshya does</div>
+                    <h2 style={{ maxWidth: '22ch', marginBottom: '1.5rem' }}>
+                        Everything your school<br />
+                        <span style={{ color: 'var(--blue)', fontStyle: 'italic' }}>needs to run itself.</span>
+                    </h2>
+                    <p style={{ maxWidth: '42rem', fontSize: '1.125rem', color: 'var(--ink-2)', lineHeight: 1.75 }}>
+                        From student records to payroll, from library tracking to cloud backups —
+                        Deekshya replaces the spreadsheets, the manual entry, and the guesswork.
+                    </p>
+                </div>
+
+                {/* Feature rows */}
+                <div style={{ borderTop: '1px solid var(--gray-line)' }}>
+                    {featuresData.map((feature, index) => (
+                        <FeatureRow key={feature.id} feature={feature} index={index} />
+                    ))}
+                </div>
+
+            </div>
+        </section>
     );
 }
 
+function FeatureRow({ feature, index }) {
+    const isEven = index % 2 === 0;
 
-function FeatureDetailsList ({data}){
+    return (
+        <div
+            style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr',
+                gap: '3rem',
+                padding: '4rem 0',
+                borderBottom: '1px solid var(--gray-line)',
+                alignItems: 'center',
+            }}
+            className="feature-row"
+        >
+            <style>{`
+                @media (min-width: 768px) {
+                    .feature-row {
+                        grid-template-columns: 1fr 1fr !important;
+                    }
+                }
+            `}</style>
 
-    return (<li>
+            {/* Text — swap order on even/odd */}
+            <div style={{ order: isEven ? 1 : 2 }}>
+                {/* Number */}
+                <div style={{
+                    fontFamily: "'JetBrains Mono', monospace",
+                    fontSize: '0.6875rem',
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase',
+                    color: 'var(--blue)',
+                    marginBottom: '1.25rem',
+                }}>
+                    {String(index + 1).padStart(2, '0')} /
+                </div>
 
+                <h3 style={{ marginBottom: '1.5rem', color: 'var(--ink)' }}>
+                    {feature.title}
+                </h3>
 
-<div className="flex my-1 md:my-4">
-         <div className="w-3 mr-4 h-3 col-auto rounded-full bg-primary ring-4 ring-secondary ring-opacity-40 my-2"> </div>
-         <div className="col-span-full w-full"> 
-          <p className=" font-semibold text-gray-900 text-md md:text-lg">{data.title}</p>
-          <p className='max-w-lg mb-2 md:mb-4 leading-7 text-gray-800'>
-                    {data.subtitle}
-                </p>
-         </div>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                    {feature.payload.data.map((item, i) => (
+                        <li key={i} style={{ display: 'flex', gap: '1rem', marginBottom: '1rem', alignItems: 'flex-start' }}>
+                            <span style={{
+                                width: '6px', height: '6px', borderRadius: '50%',
+                                background: 'var(--blue)', flexShrink: 0, marginTop: '0.5rem',
+                            }} />
+                            <div>
+                                <p style={{ fontWeight: 600, color: 'var(--ink)', marginBottom: '0.25rem', fontSize: '0.9375rem' }}>
+                                    {item.title}
+                                </p>
+                                {item.subtitle && (
+                                    <p style={{ color: 'var(--ink-3)', fontSize: '0.875rem', lineHeight: 1.6, margin: 0 }}>
+                                        {item.subtitle}
+                                    </p>
+                                )}
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            {/* Image */}
+            <div style={{
+                order: isEven ? 2 : 1,
+                display: 'flex', justifyContent: 'center', alignItems: 'center',
+                padding: '2rem',
+                background: 'var(--gray-subtle)',
+                border: '1px solid var(--gray-line)',
+            }}>
+                <img
+                    src={feature.payload.image}
+                    alt={feature.title}
+                    style={{ maxWidth: '100%', maxHeight: '280px', objectFit: 'contain' }}
+                />
+            </div>
+
         </div>
-     
-    </li>)
-
+    );
 }

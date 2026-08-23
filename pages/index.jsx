@@ -10,21 +10,10 @@ export default function HomePage() {
         <>
             <NextSeo />
             <Nav />
-            <main className="">
-                <section className='bg-background relative '>
-                   <HeroSection />
-                </section>
-                <section className='bg-background'>
-                    <article className='relative py-24 pt-36 layout'>
-                      
-                        <div className='mt-12'>
-                            <FeaturesList />
-                            <Consultation />
-                     
-
-                        </div>
-                    </article>
-                </section>
+            <main>
+                <HeroSection />
+                <FeaturesList />
+                <Consultation />
             </main>
             <Footer />
         </>
