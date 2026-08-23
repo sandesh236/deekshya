@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "@tailwindcss/forms": "^0.5.10",
-        "next": "^16.3.2",
+        "next": "15.3.5",
         "next-seo": "^6.6.0",
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
@@ -36,5 +36,8 @@
         "**/*.{js,jsx,ts,tsx,html,css,json}": [
             "prettier --write"
         ]
+    },
+    "resolutions": {
+        "postcss": "8.4.47"
     }
 }
